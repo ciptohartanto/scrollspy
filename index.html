@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      section {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        display: block;
+        position: relative;
+        width: 100%;
+      }
+      .section-1 {
+        height: 80vh;
+        background-color: palevioletred;
+      }
+      .section-2 {
+        height: 200px;
+        background-color: powderblue;
+      }
+      .section-3 {
+        height: 500px;
+        background-color: seagreen;
+      }
+      .section-4 {
+        height: 1200px;
+        background-color: tomato;
+      }
+      .section-5 {
+        height: 100px;
+        background-color: crimson;
+      }
+      .section--active {
+        background-color: fuchsia;
+        transition: 0.3s all ease-in-out;
+      }
+      .section--active:before {
+        content: 'Active';
+        color: black;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section-1" data-scrollspy></section>
+    <section class="section-2" data-scrollspy></section>
+    <section class="section-3" data-scrollspy></section>
+    <section class="section-4" data-scrollspy></section>
+    <section class="section-5" data-scrollspy></section>
+  </body>
+  <script src="scrollspy.js"></script>
+  <script>
+    const scroll_spy = scrollspy();
+    scroll_spy.init();
+  </script>
+</html>
